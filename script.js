@@ -3,7 +3,6 @@ let computerScore = 0;
 let humanChoice;
 let computerChoice;
 
-console.log("test");
 function getComputerChoice(){
     const rock = "Rock"; //ran < 2
     const paper = "Paper"; // 2
@@ -12,15 +11,15 @@ function getComputerChoice(){
     // choices: ran < 2, 2, ran > 2 
     if( ran < 2 ) {
         computerChoice = rock;
-        return rock + "," + ran;
+        return rock;
     }
     else if (ran == 2){
         computerChoice = paper;
-        return paper + "," + ran;
+        return paper;
     }
     else {
         computerChoice = scissors;
-        return scissors + "," + ran;
+        return scissors;
     }
 }  
 
