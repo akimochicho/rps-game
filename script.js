@@ -6,7 +6,7 @@ let computerChoice="";
 function getComputerChoice(){
     const choiceArray = ["Rock", "Paper", "Scissors" ];
     const ran = Math.floor(Math.random() / 0.4);
-    return choiceArray[ran];
+    return computerChoice =choiceArray[ran];
 }
 function getHumanChoice(){
     choice = prompt("Choose: (1) Rock, (2) Paper, or (3) Scissors?");
@@ -40,7 +40,7 @@ function playRound(humanChoice, computerChoice){
 function startRound(){
     for(let roundCount = 0; roundCount < 5; roundCount++ ){
         console.log("You chose: ", getHumanChoice());
-        console.log("Computer chose: ", computerChoice = getComputerChoice());
+        console.log("Computer chose: ", getComputerChoice());
         playRound(humanChoice, computerChoice);
     }
 }
