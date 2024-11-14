@@ -24,24 +24,6 @@ function getComputerChoice(){
 }  
 
 function getHumanChoice(){
-    // let choice=prompt("Choose: (1) Rock, (2) Paper, or (3) Scissors?");
-    
-    // const rock = "Rock"; //ran < 2
-    // const paper = "Paper"; // 2
-    // const scissors = "Scissors"; // ran > 2
-
-    // if (choice == 1) {
-    //     computerChoice = rock;
-    //     return rock;
-    // }
-    // else if (choice == 2) {
-    //     computerChoice = paper;
-    //     return paper;
-    // }
-    // else if (choice == 3) {
-    //     computerChoice = scissors;
-    //     return scissors;
-    // }
     choice = prompt("Choose: (1) Rock, (2) Paper, or (3) Scissors?");
     choice = choice.charAt(0).toUpperCase() + choice.slice(1);
     if (choice == "Rock" || choice == "Paper" || choice == "Scissors") {
@@ -104,13 +86,3 @@ function startRound(){
 }
 startRound();
 console.log("Human Score: ", humanScore, " Computer Score: ", computerScore);
-
-// if (roundCount < 5) {
-//     
-//     getHumanChoice();
-// }
-// else {
-//     console.log("Human Score: ", humanScore, " Computer Score: ", computerScore);
-//     console.log("End");
-// }
-
