@@ -4,25 +4,10 @@ let humanChoice;
 let computerChoice;
 
 function getComputerChoice(){
-    const rock = "Rock"; //ran < 2
-    const paper = "Paper"; // 2
-    const scissors = "Scissors"; // ran > 2
-    const ran = Math.ceil(Math.random() / 0.3);
-    // choices: ran < 2, 2, ran > 2 
-    if( ran < 2 ) {
-        computerChoice = rock;
-        return rock;
-    }
-    else if (ran == 2){
-        computerChoice = paper;
-        return paper;
-    }
-    else {
-        computerChoice = scissors;
-        return scissors;
-    }
-}  
-
+    const choiceArray = ["Rock", "Paper", "Scissors" ];
+    const ran = Math.floor(Math.random() / 0.4);
+    return computerChoice = choiceArray[ran];
+}
 function getHumanChoice(){
     choice = prompt("Choose: (1) Rock, (2) Paper, or (3) Scissors?");
     choice = choice.charAt(0).toUpperCase() + choice.slice(1);
@@ -37,17 +22,17 @@ function getHumanChoice(){
 
 function playRound(humanChoice, computerChoice){
     if(humanChoice == computerChoice) {
-        console.log ("It's a draw! You both chose ", humanChoice);
+        console.log ("It's a draw! You both chose", humanChoice +".");
     }
     else if (
         humanChoice == "Rock" && computerChoice == "Scissors"||
         humanChoice == "Paper" && computerChoice == "Rock"||
         humanChoice == "Scissors" && computerChoice == "Paper") {
-        console.log("You won! ", humanChoice, " beats ", computerChoice);
+        console.log("You won!", humanChoice, "beats", computerChoice + ".");
         humanScore++;
     }
     else {
-        console.log("You lose! ", computerChoice, " beats ", humanChoice);
+        console.log("You lose!", computerChoice, "beats", humanChoice + ".");
         computerScore++;
     }
    
