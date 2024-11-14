@@ -1,12 +1,12 @@
 let humanScore = 0;
 let computerScore = 0;
-let humanChoice;
-let computerChoice;
+let humanChoice="";
+let computerChoice="";
 
 function getComputerChoice(){
     const choiceArray = ["Rock", "Paper", "Scissors" ];
     const ran = Math.floor(Math.random() / 0.4);
-    return computerChoice = choiceArray[ran];
+    return choiceArray[ran];
 }
 function getHumanChoice(){
     choice = prompt("Choose: (1) Rock, (2) Paper, or (3) Scissors?");
@@ -35,13 +35,12 @@ function playRound(humanChoice, computerChoice){
         console.log("You lose!", computerChoice, "beats", humanChoice + ".");
         computerScore++;
     }
-   
-  
 }
+
 function startRound(){
     for(let roundCount = 0; roundCount < 5; roundCount++ ){
         console.log("You chose: ", getHumanChoice());
-        console.log("Computer chose: ", getComputerChoice());
+        console.log("Computer chose: ", computerChoice = getComputerChoice());
         playRound(humanChoice, computerChoice);
     }
 }
